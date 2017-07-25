@@ -1,0 +1,12 @@
+Character Count,Pre-Fix,Name,USERNAME,DISPLAYNAME,DESCRIPTION,SAMNAME,LOCATION
+14,SVR_,CM-Install,SVR_CM-Install,CM Install Account,ConfigMgr (SCCM) Account used for Installing & Configuring the Infrastructure,SVC-CM-Install,"OU=SCCM,OU=Service Accounts,OU=eTFL,DC=eTech,DC=Consultancy,DC=org"
+10,SVR_,CM-SQL,SVR_CM-SQL,CM SQL Service Account,ConfigMgr (SCCM) Account used for Installing & Configuring the Site DB,SVC-CM-SQL,"OU=SCCM,OU=Service Accounts,OU=eTFL,DC=eTech,DC=Consultancy,DC=org"
+10,SVR_,CM-SSI,SVR_CM-SSI,CM Site System Install Account,ConfigMgr (SCCM) Account used for Installing Site System Servers,SVR_CM-SSI,"OU=SCCM,OU=Service Accounts,OU=eTFL,DC=eTech,DC=Consultancy,DC=org"
+9,SVR_,CM-NA,SVR_CM-NA,CM Network Access Account,ConfigMgr (SCCM) Account used to retrieve content from the DP,SVR_CM-NA,"OU=SCCM,OU=Service Accounts,OU=eTFL,DC=eTech,DC=Consultancy,DC=org"
+12,SVR_,CM-CLIDC,SVR_CM-CLIDC,CM Client Install DC Account,ConfigMgr (SCCM) Account used to install the Client Agent on Domain Controllers,SVR_CM-CLIDC,"OU=SCCM,OU=Service Accounts,OU=eTFL,DC=eTech,DC=Consultancy,DC=org"
+12,SVR_,CM-CLIMS,SVR_CM-CLIMS,CM Client Install MS Account,ConfigMgr (SCCM) Account used to install the Client Agent on Member Servers,SVR_CM-CLIMS,"OU=SCCM,OU=Service Accounts,OU=eTFL,DC=eTech,DC=Consultancy,DC=org"
+12,SVR_,CM-CLIWS,SVR_CM-CLIWS,CM Client Install WS Account,ConfigMgr (SCCM) Account used to install the Client Agent on Workstations,SVR_CM-CLIWS,"OU=SCCM,OU=Service Accounts,OU=eTFL,DC=eTech,DC=Consultancy,DC=org"
+10,SVR_,CM-SRS,SVR_CM-SRS,CM SQL Reporting Services Account,ConfigMgr (SCCM) Account used for Installing & Configuring SQL Reporting Services,SVR_CM-SRS,"OU=SCCM,OU=Service Accounts,OU=eTFL,DC=eTech,DC=Consultancy,DC=org"
+13,SVR_,CM-OSDCap,SVR_CM-OSDCap,CM OSD Capture Account,ConfigMgr (SCCM) Account used for Capturing the reference image,SVR_CM-OSDCap,"OU=SCCM,OU=Service Accounts,OU=eTFL,DC=eTech,DC=Consultancy,DC=org"
+13,SVR_,CM-OSDTSL,SVR_CM-OSDTSL,CM OSD TS Logs Account,ConfigMgr (SCCM) Account used for writing back Task Seq Logs during OSD,SVR_CM-OSDTSL,"OU=SCCM,OU=Service Accounts,OU=eTFL,DC=eTech,DC=Consultancy,DC=org"
+14,SVR_,CM-DomJoin,SVR_CM-DomJoin,CM DomJoin Acccount,ConfigMgr (SCCM) Account used for joining computers to the domain during OSD,SVR_CM-DomJoin,"OU=SCCM,OU=Service Accounts,OU=eTFL,DC=eTech,DC=Consultancy,DC=org"

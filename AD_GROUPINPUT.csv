@@ -1,0 +1,11 @@
+Pre-Fix,Name,GROUPNAME,DISPLAYNAME,GROUPCATEGORY,GROUPTYPE,DESCRIPTION,LOCATION
+G_SVR_,CM-FullAdmins,G_SVR_CM-FullAdmins,CM Role - Full Administrators,Security,Global,ConfigMgr (SCCM) Security Role Group for Full Administrators,"OU=SCCM,OU=Service Accounts,OU=eTFL,DC=eTech,DC=Consultancy,DC=org"
+G_SVR_,CM-Operational,G_SVR_CM-Operational,CM Role - Operational Users,Security,Global,ConfigMgr (SCCM) Security Role Group for Operational Users,"OU=SCCM,OU=Service Accounts,OU=eTFL,DC=eTech,DC=Consultancy,DC=org"
+G_SVR_,CM-OSDeployment,G_SVR_CM-OSDeployment,CM Role - OS Deployment Users,Security,Global,ConfigMgr (SCCM) Security Role Group for OS Deployment Users,"OU=SCCM,OU=Service Accounts,OU=eTFL,DC=eTech,DC=Consultancy,DC=org"
+G_SVR_,CM-ReadOnly,G_SVR_CM-ReadOnly,CM Role - Read Only Users,Security,Global,ConfigMgr (SCCM) Security Role Group for Read Only Users,"OU=SCCM,OU=Service Accounts,OU=eTFL,DC=eTech,DC=Consultancy,DC=org"
+G_SVR_,CM -RemoteControl-WKS,G_SVR_CM -RemoteControl-WKS,CM Role - Workstation Remote Control Users,Security,Global,ConfigMgr (SCCM) Security Role Group for Remote Control Users,"OU=SCCM,OU=Service Accounts,OU=eTFL,DC=eTech,DC=Consultancy,DC=org"
+G_SVR_,CM-RemoteControl-SRV,G_SVR_CM-RemoteControl-SRV,CM Role - Server Remote Control Users,Security,Global,ConfigMgr (SCCM) Security Role Group for Remote Control Users,"OU=SCCM,OU=Service Accounts,OU=eTFL,DC=eTech,DC=Consultancy,DC=org"
+G_SVR_,CM-ReportsUsers,G_SVR_CM-ReportsUsers,CM Role - Reports Users,Security,Global,ConfigMgr (SCCM) Security Role Group for Reports Users,"OU=SCCM,OU=Service Accounts,OU=eTFL,DC=eTech,DC=Consultancy,DC=org"
+G_SVR_,CM-SiteDB,G_SVR_CM-SiteDB,CM Site Database,Security,Global,ConfigMgr (SCCM) Group containing: Site Database Server,"OU=SCCM,OU=Service Accounts,OU=eTFL,DC=eTech,DC=Consultancy,DC=org"
+G_SVR_,CM-SiteServers,G_SVR_CM-SiteServers,CM Site Servers,Security,Global,ConfigMgr (SCCM) Group containing: Primary & Secondary Site Servers,"OU=SCCM,OU=Service Accounts,OU=eTFL,DC=eTech,DC=Consultancy,DC=org"
+G_SVR_,CM-SiteSystems,G_SVR_CM-SiteSystems,CM Site Systems,Security,Global,"ConfigMgr (SCCM) Group containing: MP, DP, SUP servers","OU=SCCM,OU=Service Accounts,OU=eTFL,DC=eTech,DC=Consultancy,DC=org"
