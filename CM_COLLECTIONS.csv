@@ -1,0 +1,5 @@
+COLLECTION,LTDCOLLECTION,DeviceCollectionRoot,FolderName,LOCATION
+UPDATES - Server Dev Schedule 1,All Systems , ETF:\DeviceCollection\,SOFTWARE UPDATES, ETF:\DeviceCollection\SOFTWARE UPDATES
+UPDATES - Server Dev Schedule 2,All Systems , ETF:\DeviceCollection\,SOFTWARE UPDATES, ETF:\DeviceCollection\SOFTWARE UPDATES
+UPDATES - Server Prod Schedule 1,All Systems , ETF:\DeviceCollection\,SOFTWARE UPDATES, ETF:\DeviceCollection\SOFTWARE UPDATES
+UPDATES - Server Prod Schedule 2,All Systems , ETF:\DeviceCollection\,SOFTWARE UPDATES, ETF:\DeviceCollection\SOFTWARE UPDATES
