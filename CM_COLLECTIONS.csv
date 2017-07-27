@@ -1,0 +1,5 @@
+COLLECTION,LTDCOLLECTION,SiteCode,FolderName,LOCATION,WEEKDAY,TIME,DURATION,WEEKORDER
+UPDATES - Server Dev Schedule 1,All Systems ,eTF:\,DeviceCollection\SOFTWARE UPDATES,eTF:\DeviceCollection\SOFTWARE UPDATES,4,10/08/2017 22:00,6,SECOND
+UPDATES - Server Dev Schedule 2,All Systems ,eTF:\,DeviceCollection\SOFTWARE UPDATES,eTF:\DeviceCollection\SOFTWARE UPDATES,5,11/08/2017 22:00,6,SECOND
+UPDATES - Server Prod Schedule 1,All Systems ,eTF:\,DeviceCollection\SOFTWARE UPDATES,eTF:\DeviceCollection\SOFTWARE UPDATES,5,18/08/2017 22:00,6,THIRD
+UPDATES - Server Prod Schedule 2,All Systems ,eTF:\,DeviceCollection\SOFTWARE UPDATES,eTF:\DeviceCollection\SOFTWARE UPDATES,6,19/08/2017 22:00,6,THIRD
