@@ -4,22 +4,20 @@
 # CREATED:  11/07/2017 10:56
 # VERSION:  0.1
 # COPYRIGHT (c) eTFLConsultancy. All rights reserved.
-#~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+#~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 # PURPOSE: This script automates the creation of ConfigMgr 
-#          Collections using a .CSV file 
-#~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+#          Collections & Maintenance Winddows using a CM_COLLECTIONS.csv file
+#~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 # RUN ONCE TO ESTABLISH CONNECTION TO CONFIGMGR CONSOLE
 {<# 
-    $SiteCode = 'ETF:'
-    Set-Location -Path 'C:\Program Files (x86)\Microsoft Configuration Manager\AdminConsole\bin'
-    Import-Module .\ConfigurationManager.psd1
-    Set-Location $SiteCode
+# ~~~~~~~~~~~~~~~~~ IMPORT CONFIGMGR PoSH MODULE ~~~~~~~~~~~~~~~~~ 
+    Import-Module $env:SMS_ADMIN_UI_PATH.Replace("\bin\i386","\bin\configurationmanager.psd1")
 
-    Get-CMCmdletUpdateCheck #if enabled disable
-    Set-CMCmdletUpdateCheck -CurrentUser -IsUpdateCheckEnabled 0
-    
-    Get-Module -Name ConfigurationManager | Select-Object -Property Name,Version
+    # ~~~~ RETIREVE CM SITECODE ~~~~
+    $SiteCode = Get-PSDrive -PSProvider CMSITE
 
+    # ~~~~ SET CONNECTION CONTEXT ~~~~
+    Set-Location "$($SiteCode.Name):\"
 #>}
 
 # ~~~~~~~~~~~~~~~~~ CREATES COLLECTIONS: ~~~~~~~~~~~~~~~~~ 
@@ -30,7 +28,7 @@
 #---- CREATE COLLECTIONS & MOVE TO FOLDERS
     foreach ($item in $CSV) 
     {
-    New-CMDeviceCollection -Name $item.COLLECTION -LimitingCollectionName $item.LTDCOLLECTION #-RefreshType ConstantUpdate, Periodic -RefreshSchedule (New-CMSchedule -Start (get-date) -RecurInterval Days -RecurCount 7)}
+    New-CMDeviceCollection -Name $item.COLLECTION -LimitingCollectionName $item.LTDCOLLECTION -RefreshType Periodic -RefreshSchedule (New-CMSchedule -Start (get-date) -RecurInterval Days -RecurCount 7) 
     }
 
     Start-Sleep -Seconds 5 
@@ -39,4 +37,12 @@
     Get-CMDeviceCollection -Name $item.COLLECTION | MOVE-CMObject -FolderPath $item.LOCATION
     }    
 
-    
+#---- CONFIGURE MAINTENANCE WINDOW
+    Start-Sleep -Seconds 5 
+
+    foreach ($item in $CSV) 
+    {
+    $Schedule = New-CMSchedule -DurationCount $item.DURATION -DurationInterval Hours -RecurCount 1 -DayOfWeek $item.WEEKDAY -WeekOrder $item.WEEKORDER -Start ($item.TIME)
+    $Collection = Get-CMDeviceCollection -Name $item.COLLECTION
+    New-CMMaintenanceWindow -CollectionID $Collection.CollectionID -Schedule $Schedule -Name "Maintenance Window"
+    }
